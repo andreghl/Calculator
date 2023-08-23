@@ -1,0 +1,54 @@
+#This file is written in Python.
+#It is a calculator.
+
+#Lets users chooses their values
+a = input("Choose the first number" )
+b = input("Choose the second number" )
+
+
+#Transform str() into into() to allows python to run calculations on values
+a = int(a)
+b = int(b)
+
+#Check if data types are int()
+print(type(a))
+
+#Let users choose the operator
+print ("Choose operation from list below")
+operations = ("+", "-", "*", "/")
+print(operations)
+
+x = input ("Choose your operator" )
+
+
+
+#Formulas for each operation
+def sum():
+    print (a+b)
+
+def subs():
+    print (a-b)
+
+def mult():
+    print (a*b)
+
+def div():
+    print (a/b)
+
+#Using Dictionary to store all the possibe operations
+choices = {"+": sum(), "-": subs(), "*": mult(), "/": div()}
+
+#Rules
+
+if x == "+":
+    print(sum())
+
+if x == "-":
+    print(subs())
+
+if x == "*":
+    print(mult())
+
+if x == "/":
+    print(div())
+    
