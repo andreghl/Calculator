@@ -1,0 +1,72 @@
+#This file is written in Python
+
+
+# import everything from tkinter module 
+from tkinter import*
+
+# create a tkinter window
+Calc = Tk()             
+ 
+# Open window having dimension 322x534
+Calc.geometry('322x534')
+
+ 
+# Create the buttons (numbers)
+btn1 = Button(Calc, text = '1', bd = "3",
+             command = clicked() ) 
+btn1.place(x=50, y=150)   
+
+btn2 = Button(Calc, text = "2", bd = "3",
+              command = clicked())
+btn2.place(x=80, y=150)
+
+btn3 = Button(Calc, text = "3", bd = "3",
+              command = clicked())
+btn3.place(x=110, y=150)
+
+btn4 = Button(Calc, text = "4", bd = "3",
+              command = print ("4"))
+btn4.place(x=50, y=200)
+
+btn5 = Button(Calc, text = "5", bd = "3",
+              command = print ("5"))
+btn5.place(x=80, y=200)
+
+btn6 = Button(Calc, text = "6", bd = "3",
+              command = print ("6"))
+btn6.place(x=110, y=200)
+
+btn7 = Button(Calc, text = "7", bd = "3",
+              command = print ("7"))
+btn7.place(x=50, y=250)
+
+btn8 = Button(Calc, text = "8", bd = "3",
+              command = print ("8"))
+btn8.place(x=80, y=250)
+
+btn9 = Button(Calc, text = "9", bd = "3",
+              command = print ("9"))
+btn9.place(x=110, y=250)
+
+btn0 = Button(Calc, text = "0", bd = "3",
+              command = print ("0"))
+btn0.place(x=80, y=300)
+
+# Create the buttons for the operators
+plus = Button(Calc, text ="+", bd="3",
+              command = print("+"))
+plus.place(x=140,y=150)
+
+minus = Button(Calc, text = "-", bd= "3",
+               command = print ("-"))
+minus.place(x=140, y=200)
+
+times = Button(Calc, text = "x", bd = "3",
+               command = print ("*"))
+times.place(x=140, y= 250)
+
+div = Button(Calc, text = "/", bd = "3",
+             command = print("/"))
+div.place(x=140, y= 300)
+
+Calc.mainloop()
