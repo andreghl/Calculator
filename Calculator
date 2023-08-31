@@ -12,30 +12,31 @@ a = int(num1)
 b = int(num2)
 
 #Creating the different operations
-def add():
-    print ("The answer is:", (a+b))
+def add(a,b):
+    return a+b
 
-def sub():
-  print ("The answer is:", (a-b))
+def sub(a,b):
+  return a-b
 
-def mult():
-  print("The answer is:", (a*b))
+def mult(a,b):
+  return a*b
 
-def div():
-  print("The answer is:", (a/b))
+def div(a,b):
+  return a/b
 
-def pwr():
-  print("The answer is:",(a**b))
+def pwr(a,b):
+  return a**b
 
 if op == "+":
-  print(add())
+  print(add(a,b))
 elif op == "-":
-  print(subs())
+  print(sub(a,b))
 elif op == "*":
-  print(mult())
+  print(mult(a,b))
 elif op == "/":
-  print(div())
+  print(div(a,b))
 elif op == "^":
-  print(pwr())
+  print(pwr(a,b))
 else:
   print("Error")
+
