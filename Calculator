@@ -1,0 +1,41 @@
+#This file is written in Python.
+#It is a calculator.
+
+#User input
+num1 = input("Number 1 = " )
+print("You can choose from the following operators: +, -, *, /, ^ ")
+op = input("Choose operator: " )
+num2 = input("Number 2 = " )
+  
+#Transform str(User Input) into int(User Input)
+a = int(num1)
+b = int(num2)
+
+#Creating the different operations
+def add():
+    print ("The answer is:", (a+b))
+
+def subs():
+  print ("The answer is:", (a-b))
+
+def mult():
+  print("The answer is:", (a*b))
+
+def div():
+  print("The answer is:", (a/b))
+
+def pwr():
+  print("The answer is:",(a**b))
+
+if op == "+":
+  print(add())
+elif op == "-":
+  print(subs())
+elif op == "*":
+  print(mult())
+elif op == "/":
+  print(div())
+elif op == "^":
+  print(pwr())
+else:
+  print("Error")
