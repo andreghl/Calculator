@@ -15,7 +15,7 @@ b = int(num2)
 def add():
     print ("The answer is:", (a+b))
 
-def subs():
+def sub():
   print ("The answer is:", (a-b))
 
 def mult():
