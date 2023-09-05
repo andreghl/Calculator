@@ -1,27 +1,23 @@
-#This file is written in Python
-# import everything from tkinter module
-from tkinter import*     
+#Import the required libraries
+from tkinter import *
+from tkinter import ttk
 
-# create a tkinter window
-Calc = Tk()             
- 
-# Open window having dimension 240x400 pixels
-Calc.geometry('240x400')
-Calc.title("Calculator")
 
-#Create title of the program
-title = Label(Calc, text="Calculator", font=12).place(x=40,y=30)
+calc = Tk()
+calc.geometry('240x400')
+calc.title("Calculator")
 
-#Create Input widgets
-text_num1 = Label(Calc, text= "Number 1").place(x=10,y=80)
-num1 = Entry(Calc, textvariable= "Number 1").place(x=70,y=80)
+#User input
+text_num1 = Label(calc, text= "Number 1").place(x=10,y=80)
+num1 = Entry(calc, textvariable= "Number 1").place(x=70,y=80)
 
-text_op = Label(Calc, text= "Operator").place(x=10, y=120)
-op = Entry(Calc, textvariable="Your operator").place(x=70,y=120)
+text_op = Label(calc, text= "Operator").place(x=10, y=120)
+op = Entry(calc, textvariable="Your operator").place(x=70,y=120)
 
-text_num2 = Label(Calc, text="Number 2").place(x=10, y=160)
-num2 = Entry(Calc, textvariable="Number 2").place(x=70, y=160)
+text_num2 = Label(calc, text="Number 2").place(x=10, y=160)
+num2 = Entry(calc, textvariable="Number 2").place(x=70, y=160)
 
-calculate = Button(Calc, text="Calculate", bd = 3).place(x=80, y=200)
+#User output
+output = Label(calc, text = "Answer: ", height=2, width=10).place(x=50,y=250)
 
-Calc.mainloop()
+calc.mainloop()
