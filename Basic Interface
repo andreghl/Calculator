@@ -1,7 +1,6 @@
-#Import the required libraries
+#Import the libraries
 from tkinter import *
 from tkinter import ttk
-
 
 calc = Tk()
 calc.geometry('240x400')
@@ -9,15 +8,16 @@ calc.title("Calculator")
 
 #User input
 text_num1 = Label(calc, text= "Number 1").place(x=10,y=80)
-num1 = Entry(calc, textvariable= "Number 1").place(x=70,y=80)
+num1 = Entry(calc, textvariable="Number 1").place(x=70,y=80)
 
 text_op = Label(calc, text= "Operator").place(x=10, y=120)
 op = Entry(calc, textvariable="Your operator").place(x=70,y=120)
 
-text_num2 = Label(calc, text="Number 2").place(x=10, y=160)
-num2 = Entry(calc, textvariable="Number 2").place(x=70, y=160)
+text_num2 = Label(calc, text= "Number 2").place(x=10, y=160)
+num2 =Entry(calc, textvariable="Number 2").place(x=70, y=160)
 
-#User output
-output = Label(calc, text = "Answer: ", height=2, width=10).place(x=50,y=250)
+# Did not manage to find a way to store user input 
+# and run math opertions on it
+# I will look at this problem later
 
 calc.mainloop()
