@@ -1,47 +1,37 @@
-#This file is written in Python.
-#It is a calculator.
+#This file is written in python
 
-#User input
-num1 = input("Number 1 = " )
-print("You can choose from the following operators: +, -, *, /, ^ ")
-op = input("Choose operator: " )
-num2 = input("Number 2 = " )
-  
-#Transform str(User Input) into int(User Input)
-a = int(num1)
-b = int(num2)
+rules = "Seperate the values and the operator for the calculator to work"
+running = True
 
-#Creating the different operations
-def add(a,b,op):
-    if op == "+":
-      return a+b
+while running:
+    app_info = print(rules)
+    user_input = input("Enter your calculation: " )
+    #Split the string into a list in the form data(0,1,2)
+    data = user_input.split()
 
-def sub(a,b,op):
-  if op == "-":
-    return a-b
+    #Attribute a name to each string.split() given its position
+    num1 = data[0]
+    op = data[1]
+    num2 = data[2]
 
-def mult(a,b,op):
-  if op == "*":
-    return a*b
+    #Transform the str() into int()
+    num1 = float(num1)
+    op = op
+    num2 = float(num2)
 
-def div(a,b,op):
-  if op == "/":
-    return a/b
-
-def pwr(a,b,op):
-  if op == "^":
-    return a**b
-  
-#Conditions
-if op == "+":
-  print(add(a,b,op))
-elif op == "-":
-  print(sub(a,b,op))
-elif op == "*":
-  print(mult(a,b,op))
-elif op == "/":
-  print(div(a,b,op))
-elif op == "^":
-  print(pwr(a,b,op))
-else:
-  print("Error")
+    #Define operations
+    def calc():
+        if op == '+':
+            return (num1 + num2)
+        elif op == '-':
+            return (num1 - num2)
+        elif op == '*':
+            return (num1 * num2)
+        elif op == '/':
+            return (num1 / num2)
+        elif op == '^':
+            return (num1 ** num2)
+        else: 
+            return 'ERROR! Please Try again'
+        
+    print("The answer is:",calc())
